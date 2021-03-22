@@ -1,0 +1,26 @@
+// C program to find power of a number using loops
+
+#include
+int main()
+{
+    int base, exponent;
+
+    long int result = 1;
+
+    printf(“\nEnter the base value : “);
+    scanf(“%d”, &base);
+
+    printf(“\nEnter the exponent value : “);
+    scanf(“%d”, &exponent);
+
+    while(exponent != 0)
+    {
+        result = result * base;
+        –exponent;
+    }
+
+    printf(“\nResultant value : %d\n”, result);
+
+    return 0;
+}
+

@@ -1,0 +1,4 @@
+base = int(input(“Enter the base value : “))
+exponent = int(input(“Enter the exponent value : “))
+print(“Resultant value :”,int(pow(base, exponent)))
+

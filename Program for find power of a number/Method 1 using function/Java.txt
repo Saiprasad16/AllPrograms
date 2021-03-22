@@ -1,0 +1,18 @@
+// Java program to find the power of a number using recursion
+import java.util.*;
+public class Main
+{
+    public static void main (String[] args)
+    {
+        int base,exponent;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“\nEnter the base value : “);
+        base = sc.nextInt();
+        System.out.print(“\nEnter the exponent value : “);
+        exponent = sc.nextInt();
+        int result = (int)Math.pow(base, exponent);
+        System.out.println(“\nResultant value : ” + result);
+
+    }
+}
+

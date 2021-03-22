@@ -1,0 +1,38 @@
+# Python program to find median of two sorted arrays
+
+def calculate_median (l1, l2, n):
+    i=0
+    j=0
+    x= -1
+    y= -1
+    for cnt in range(n+1):
+        if i == n:
+            x = y
+            y = l2[0]
+            break
+            elif j == n:
+                x = y
+                y = l1[0]
+                break
+                if l1[i] < l2[j]:
+                    x = y
+                    y = l1[i]
+                    i = i+1
+                    else:
+                        x = y
+                        y = l2[j]
+                        j = j+1
+                        return (x + y)/2
+
+                    num = int(input(“Enter the number of elements: “))
+                    l1 = []
+                    l2 = []
+                    print(“Enter the first array elements: “)
+                    for i in range (num):
+                        l1.append(int(input()))
+
+                        print(“Enter the second array elements: “)
+                        for i in range (num):
+                            l2.append(int(input()))
+                            print(“Median: %d” %calculate_median(l1,l2, num))
+

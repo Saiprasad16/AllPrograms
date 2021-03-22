@@ -1,0 +1,21 @@
+# LCM of two numbers in python
+
+def GCD(a, b):
+    if (a == 0 or b == 0):
+        return 0
+
+    if (a == b):
+        return a;
+
+    if (a > b):
+        return GCD(a-b, b);
+    return GCD(a, b-a);
+
+def LCM(a, b):
+    return int((a*b)/GCD(a, b));
+
+print(“Enter two numbers “)
+a = int(input())
+b = int(input())
+print(“LCM of”,a,”and”,b,”is”,LCM(a,b))
+

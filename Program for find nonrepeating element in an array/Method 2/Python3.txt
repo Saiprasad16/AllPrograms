@@ -1,0 +1,20 @@
+from collections import defaultdict
+
+def non_repeating_element(arr, n):
+    table = defaultdict(lambda:0)
+
+    for i in range(n):
+        table[arr[i]] += 1
+
+        for i in range(n):
+            if table[arr[i]] == 1:
+                print(arr[i], end = ” “)
+                return ” “
+
+            # Main Function
+            n = int(input(“Enter the number of elements : “))
+            print(“Input the array elements : “)
+            for i in range(0,n):
+                arr[i] = int(input())
+                print(non_repeating_element(arr, n))  
+

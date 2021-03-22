@@ -1,0 +1,27 @@
+// C++ program to find the power of a number using loops
+
+#include
+using namespace std;
+int main()
+{
+    int base, exponent;
+
+    long int result = 1;
+
+    cout << “\nEnter the base value : “;
+    cin >> base;
+
+    cout << “\nEnter the exponent value : “;
+    cin >> exponent;
+
+    while(exponent != 0)
+    {
+        result = result * base;
+        –exponent;
+    }
+
+    cout << “\nResultant value : ” << result << endl;
+
+    return 0;
+}
+

@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int min = INT_MAX;
+    int i,n = 5;
+    cout << "\nEnter the number of elements : ";
+    cin >> n;
+    int arr[n];
+    cout << "\nInput the array elements : ";
+    for(i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    int second_min = INT_MAX ;
+    if (n < 2)
+    {
+        cout <<"\nInvalid Input";
+    }
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] < min)
+        {
+            second_min = min;
+            min = arr[i];
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        if(arr[i] < second_min && arr[i] != min)
+        {
+            second_min = arr[i];
+        }
+    }
+    cout << "\nThe second smallest element is " << second_min;
+    cout << endl;
+    return 0;
+}

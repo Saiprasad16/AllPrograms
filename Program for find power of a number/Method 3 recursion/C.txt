@@ -1,0 +1,22 @@
+// C program to find power of a number using recursion
+#include <stdio.h>
+
+int power_of_a_number(int base, int exponent)
+{
+    if (exponent != 0)
+        return (base * power_of_a_number(base, exponent-1));
+    else
+        return 1;
+}
+
+int main()
+{
+    int base, exponent;
+    printf(“\nEnter the base value : “);
+    scanf(“%d”, &base);
+    printf(“\nEnter the exponent value : “);
+    scanf(“%d”, &exponent);
+    printf(“\nResultant value : %d\n”, power_of_a_number(base,exponent));
+    return 0;
+}
+

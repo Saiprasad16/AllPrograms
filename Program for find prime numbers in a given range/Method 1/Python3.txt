@@ -1,0 +1,15 @@
+# Python program to find prime numbers in a given range
+
+a = int(input(“Enter start value : “))
+b = int(input(“Enter end value : “))
+print(“Prime numbers between”,a,”and”,b,”are :”)
+while (a < b):
+    flag = 0;
+    for i in range(2, int(a/2),1):
+        if(a % i == 0):
+            flag = 1;
+            break
+            if (flag == 0):
+                print(a, end = ” “)
+                a = a + 1
+

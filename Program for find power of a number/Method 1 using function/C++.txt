@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    int base, exponent;
+    cout << “\nEnter the base value : “;
+    cin >> base;
+    cout << “\nEnter the exponent value : “;
+    cin >> exponent;
+    int result = pow(base,exponent);
+    cout << “\nResultant value : ” << result<< endl;
+    return 0;
+}
+

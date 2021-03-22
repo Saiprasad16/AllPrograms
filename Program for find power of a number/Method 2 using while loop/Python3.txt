@@ -1,0 +1,12 @@
+# Python program to find the power of a number
+
+base = int(input(“Enter the base value : “))
+exponent = int(input(“Enter the exponent value : “))
+result = 1
+while(exponent != 0):
+    result = result * base
+    exponent = exponent – 1
+    print(“Resultant value :”,result)
+
+
+

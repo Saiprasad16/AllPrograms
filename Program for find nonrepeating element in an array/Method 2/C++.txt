@@ -1,0 +1,30 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+void non_repeating_elements(int arr[], int n)
+{
+    unordered_map<int, int> table;
+    for (int i = 0; i < n; i++)
+        table[arr[i]]++;
+
+    for (auto e : table)
+        if (e.second == 1)
+            cout << e.first << ” “;
+}
+
+int main()
+{
+    int n,i;
+    cout << “\nEnter the number of elements : “;
+    cin >> n;
+    int arr[n];
+    cout << “\nInput the array elements : “;
+    for(i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    non_repeating_elements(arr, n);
+    return 0;
+}

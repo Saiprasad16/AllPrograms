@@ -1,0 +1,14 @@
+// C++ program to find the maximum number of handshakes
+
+#include<iostream.h>
+using namespace std;
+
+int main()
+{
+    //fill the code
+    int num;
+    cin >> num;
+    int total = num * (num-1) / 2; // Combination nC2
+    cout << total;
+    return 0;
+}
