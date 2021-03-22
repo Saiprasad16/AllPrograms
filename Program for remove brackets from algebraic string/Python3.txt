@@ -1,0 +1,9 @@
+// Program to remove brackets from an algebraic string
+
+s = input(“Enter the string: “)
+brackets = (‘()’)  
+for x in s:
+    if x in brackets:
+        s = s.replace(x, “”)  
+        print(s)
+

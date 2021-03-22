@@ -1,0 +1,23 @@
+/* Java program to remove spaces from a string */
+import java.util.*;
+
+class Main
+{
+    static int remove_white_spaces(char []str)
+    {
+        int count = 0;
+        for (int i = 0; i<str.length; i++)
+            if (str[i] != ‘ ‘)
+                str[count++] = str[i];
+        return count;
+    }
+
+    public static void main (String[] args)
+    {
+        char[] str = new char[50];
+        Scanner sc = new Scanner(System.in);
+        str = sc.nextLine().toCharArray();
+        int i = remove_white_spaces(str);
+        System.out.println(String.valueOf(str).subSequence(0, i));
+    }
+}
