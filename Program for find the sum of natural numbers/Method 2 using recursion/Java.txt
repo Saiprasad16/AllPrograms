@@ -1,0 +1,22 @@
+// sum of natural numbers usimg recursion java
+
+import java.util.*;
+public class Main
+{
+    static int sum_of_natural_numbers(int n)
+    {
+        if(n == 0)
+            return 0;
+        return n + sum_of_natural_numbers(n – 1);
+    }
+
+    public static void main(String args[])
+    {
+        int n;
+        System.out.print(“\nEnter the number : “);
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        System.out.println(“Sum of ” + n + “Natural Numbers is ” + sum_of_natural_numbers(n));
+    }
+}
+

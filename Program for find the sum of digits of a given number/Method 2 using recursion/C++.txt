@@ -1,0 +1,18 @@
+// C++ program to find the sum of digits of a number
+
+# include <iostream>
+using namespace std;
+
+int sum_of_digits(int n)
+{
+    return n == 0 ? 0 : n + sum_of_digits(n/10) ;
+}
+
+int main()
+{
+    int n;
+    cout << “\nEnter a number : “;
+    cin >> n;
+    cout << “\nSum of digits of ” << n << ” is ” << sum_of_digits(n) << endl;
+    return 0;
+}

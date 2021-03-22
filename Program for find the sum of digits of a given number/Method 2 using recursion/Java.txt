@@ -1,0 +1,21 @@
+// Java program to find the sum of digits of a number
+
+import java.io.*;
+import java.util.*;
+
+class Main
+{
+    static int sum_of_digits(int n)
+    {
+        return n == 0 ? 0 : n + sum_of_digits(n/10) ;
+    }
+
+    public static void main(String args[])
+    {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“\nEnter a number : “);
+        n = sc.nextInt();
+        System.out.print(“\nSum of digits of “+ n + ” is ” + sum_of_digits(n));
+
+} }

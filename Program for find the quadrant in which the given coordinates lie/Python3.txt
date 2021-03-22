@@ -1,0 +1,14 @@
+# Python program to find the quadrant in which the given coordinates lie
+
+a = int(input())
+b = int(input())
+if(a > 0 and b > 0):
+    print(“Ist Quadrant”)
+    elif(a < 0 and b > 0):
+        print(“IInd Quadrant”)
+        elif(a < 0 and b < 0):
+            print(“IIIrd Quadrant”)
+            elif(a > 0 and b < 0):
+                print(“IVth Quadrant”)
+                else:
+	print(“Origin”)

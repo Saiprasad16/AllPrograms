@@ -1,0 +1,19 @@
+# Python program to find the maximum element in each row of a matrix
+
+def maxi_row(arr):
+
+    no_of_rows = len(arr)
+    no_of_column = len(arr[0])
+
+    for i in range(no_of_rows):
+
+        max1 = 0
+        for j in range(no_of_column):
+            if arr[i][j] > max1 :
+                max1 = arr[i][j]
+
+                print(max1)
+
+
+                mat1 = [[1,2,3],[4,5,6],[7,8,9]]
+maxi_row(mat1)

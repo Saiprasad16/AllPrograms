@@ -1,0 +1,19 @@
+// Java program to find the sum of numbers in a given range
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int start, end;
+        Scanner sc = new Scanner(System.in);
+        start = sc.nextInt();
+        end = sc.nextInt();
+        int i, sum = 0;
+        for(i = start; i <= end; i++)
+        {
+            sum = sum + i;
+        }
+        System.out.print(sum);
+    }
+}

@@ -1,0 +1,38 @@
+// C++ program to find the number of times digit 3 occurs in each and every number from 0 to n
+
+#include <iostream.h>
+
+using namespace std;
+
+int count_3s(int n)
+{
+    int count = 0;
+    while (n > 0)
+    {
+        if (n % 10 == 3)
+        {
+            count++;
+        }
+        n = n / 10;
+    }
+    return count;
+}
+
+int count_in_range(int n)
+{
+    int count = 0 ;
+    for (int i = 2; i <= n; i++)
+    {
+        count += count_3s(i);
+    }
+    return count;
+}
+
+int main()
+{
+    int n;
+    cout << “nEnter the end value : “;
+    cin >> n;
+    cout << “nTotal occurrences of 3 from 0 to ” << n << ” is ” << count_in_range(n) << endl;
+    return 0;
+}
