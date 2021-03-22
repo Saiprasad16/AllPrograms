@@ -1,0 +1,9 @@
+# Python program to delete an element in an array
+
+arr = [1,2,3,4,5]
+
+pos = int(input())
+arr.remove(arr[pos])
+
+for i in range(0,n-1):
+print(arr[i], end = ” “)

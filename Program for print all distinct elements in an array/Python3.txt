@@ -1,0 +1,20 @@
+def distinct(arr, num):
+    arr1 = []
+    for i in range(0, num):
+        d = 0
+        for j in range(0, i):
+            if (arr[i] == arr[j]):
+                d = 1
+                break
+                if (d == 0):
+                    arr1.append(arr[i])
+                    print(“Distinct elements:”)
+                    print (arr1)
+                    n = int(input(“Enter the size of the string:”))
+                    arr = []
+                    for i in range(n):
+                        arr.append(int(input(“Enter the Element:”)))
+                        print(“Input array: “)
+                        print (arr)
+                        distinct(arr, n)
+

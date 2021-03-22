@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main
+{
+    static void is_leap_year(int year)
+    {
+        if(year%4 == 0)
+        {
+            if( year%100 == 0)
+            {
+                if ( year%400 == 0)
+                    System.out.println(year + ” is a leap year\n”);
+                else
+                    System.out.println(year + ” is not a leap year\n”);
+            }
+            else
+                System.out.println(year + ” is a leap year\n”);
+        }
+        else
+            System.out.println(year + ” is not a leap year\n”);
+    }
+
+    public static void main(String[] args) {
+        int year;
+        System.out.print(“Enter a year: “);
+        Scanner sc = new Scanner(System.in);
+        year = sc.nextInt();
+        System.out.println(“\n”);
+        is_leap_year(year);
+    }
+
+}
+

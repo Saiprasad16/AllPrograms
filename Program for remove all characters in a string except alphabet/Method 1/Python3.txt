@@ -1,0 +1,12 @@
+# Python program to remove all characters in a string except alphabet
+
+input_str = “face i45s th678e inde56x o456$%f min567d”
+newString = ”
+
+# only the alphabets are defined as valid characters
+valid = “abcdefghijklmnopqrstuvwxyz”   
+for char in input_str:
+    if char in valid:
+        newString += char      # characters other than valid are not ignored
+        print (newString)
+

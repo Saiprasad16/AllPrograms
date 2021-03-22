@@ -1,0 +1,12 @@
+# Python program to insert an element in an array
+
+n = int(input())
+sum = 0
+arr = [1,2,3,4,5]
+
+pos = int(input())
+ele = int(input())
+arr.insert(pos,ele)
+
+for i in range(0,n):
+print(arr[i], end = ” “)

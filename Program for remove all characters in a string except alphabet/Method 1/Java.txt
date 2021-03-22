@@ -1,0 +1,19 @@
+// Java program to remove all characters in a string except alphabet
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String input;
+        int i;
+        System.out.print(“Enter a string : “);
+        Scanner sc = new Scanner(System.in);
+        input = sc.nextLine();
+        System.out.println();
+
+        //Replacing characters other than alphabets by “”
+        System.out.println(“Output String : ” + input.replaceAll(“[^a-zA-Z]”,””));    
+    }
+}
+

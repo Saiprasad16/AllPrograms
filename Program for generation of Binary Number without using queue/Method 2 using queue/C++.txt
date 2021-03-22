@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+void binary_numbers_using_queue(int n)
+{
+    queue<string> queue1;
+    queue1.push("1");
+    while (n--)
+    {
+        string a = queue1.front();
+        queue1.pop();
+        cout << a << "\n";
+        string b = a;
+        queue1.push(a.append("0"));
+        queue1.push(b.append("1"));
+    }
+}
+int main()
+{
+    int n;
+    cout << "\nEnter the end value : ";
+    cin >> n;
+    cout << "\nBinary numbers from 1 to "<< n << " : "<<"\n\n";
+    binary_numbers_using_queue(n);
+    return 0;
+}

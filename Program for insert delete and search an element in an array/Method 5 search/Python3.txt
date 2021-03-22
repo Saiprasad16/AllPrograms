@@ -1,0 +1,12 @@
+# Python program to search an element in an array
+
+n = int(input())
+sum = 0
+arr = []
+for i in range(0,n):
+    temp = int(input())
+    arr.append(temp)
+    ele = int(input())
+    for i in range(0,n):
+        if(arr[i] == ele):
+print(“Element Found”)
