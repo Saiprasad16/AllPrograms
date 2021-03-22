@@ -1,0 +1,28 @@
+# Python program to check if two arrays are equal or not
+
+def arrays_equal(arr1, arr2, n, m):
+    count = 0
+    arr1.sort()
+    arr2.sort()
+    for i in range(0,n):
+        if(arr1[i] == arr2[i]):
+            count = count + 1
+            print(count)
+            return count
+
+        n = int(input())
+        m = int(input())
+        arr1 = []
+        arr2 = []
+        for i in range(0,n):
+            temp = int(input())
+            arr1.append(temp)
+
+            for i in range(0,m):
+                temp = int(input())
+                arr2.append(temp)
+
+                if(arrays_equal(arr1, arr2, n, m) != n):
+                    print(“Not Same”)
+                    else:
+print(“Same”)

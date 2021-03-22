@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int a, char *b[])
+{
+int number, i, temp, sum = 0, factorial = 1;
+number = atoi(b[1]);
+temp = number;
+while(number != 0)
+{
+int rem = number%10;
+for(i=2; i<=rem; i++)
+{
+factorial = factorial * i;
+}
+sum = sum + factorial;
+number = number/10;
+factorial = 1;
+}
+if(temp == sum)
+printf("YES");
+else
+printf("NO");
+return 0;
+}

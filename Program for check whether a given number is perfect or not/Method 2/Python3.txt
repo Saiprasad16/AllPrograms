@@ -1,0 +1,18 @@
+# Python program to check whether a given number is a perfect number or not
+
+def is_perfect_number(n):
+    sum = 1
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            sum = sum + i + n/i
+            i += 1
+
+            return (True if sum == n and n!=1 else False)
+
+        num = int(input(“Enter a number : “))
+        if(is_perfect_number(num)):
+            print(num,”is a perfect number”)
+            else:
+                print(num,”is not a perfect number”)
+
