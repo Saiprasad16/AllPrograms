@@ -1,0 +1,21 @@
+# Arranging of flower sticks in a boquet – Python code
+
+n = int(input(“Enter the value of n: “))
+k = int(input(“Enter the value of k: “))
+arr = []
+a = []
+print(“Enter the values of the array: “)
+for i in range (n):
+    arr.append(input())
+    arr.sort()
+    for i in range (0,k):
+        t = arr[0]
+        a.append(t) 
+        del arr[0]
+        arr.sort(reverse = True)
+        for i in range (0,n-k):
+            t = arr[0]
+            a.append(t)
+            del arr[0]
+            print(a)
+

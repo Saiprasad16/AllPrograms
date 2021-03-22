@@ -1,0 +1,48 @@
+// C++ program to check if the given arrays are disjoint or not
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+bool is_disjoint(int arr1[], int arr2[], int m, int n)
+{
+    sort(arr1, arr1+m);
+    sort(arr2, arr2+n);
+
+    int i = 0, j = 0;
+    while (i < m && j < n)
+    {
+        if (arr1[i] < arr2[j])
+            i++;
+        else if (arr2[j] < arr1[i])
+            j++;
+        else
+            return false;
+    }
+
+    return true;
+}
+
+int main()
+{
+    int m,n;
+    cout << “\nEnter the size of array 1 : “;
+    cin >> m;
+    cout << “\nEnter the size of array 2 : “;
+    cin >> n;
+    int arr1[m],arr2[n];
+    int i;
+    cout << “\nEnter the array 1 elements : “;
+    for(i=0;i<m;i++)
+    {
+        cin >> arr1[i];
+    }
+    cout << “\nEnter the array 2 elements : “;
+    for(i=0;i<n;i++)
+    {
+        cin >> arr2[i];
+    }
+    is_disjoint(arr1, arr2, m, n)? cout << “\nThe arrays are disjoint\n ” : cout << ” \nThe arrays are not disjoint\n”;
+    return 0;
+}
+

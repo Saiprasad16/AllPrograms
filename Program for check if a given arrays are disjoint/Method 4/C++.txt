@@ -1,0 +1,45 @@
+// C++ program to check if two given arrays are disjoint or not
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool is_disjoint(int arr1[], int arr2[], int n1, int n2)
+{
+    set<int> myset;
+
+    for (int i = 0; i < n1; i++)
+        myset.insert(arr1[i]);
+
+    for (int i = 0; i < n2; i++)
+        if (myset.find(arr2[i]) != myset.end())
+            return false;
+
+    return true;
+}
+
+int main()
+{
+    int m,n;
+    cout << “\nEnter the size of array 1 : “;
+    cin >> m;
+    cout << “\nEnter the size of array 2 : “;
+    cin >> n;
+    int arr1[m],arr2[n];
+    int i;
+    cout << “\nEnter the array 1 elements : “;
+    for(i=0;i<m;i++)
+    {
+        cin >> arr1[i];
+    }
+    cout << “\nEnter the array 2 elements : “;
+    for(i=0;i<n;i++)
+    {
+        cin >> arr2[i];
+    }
+
+    if (is_disjoint(arr1, arr2, m, n))
+        cout << “\nThe given arrays are disjoint\n”;
+    else
+        cout << “\nThe given arrays are not disjoint\n”;
+}
+

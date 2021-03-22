@@ -1,0 +1,48 @@
+// Java program to check if the given arrays are disjoint
+
+import java.util.*;
+
+class Main
+{
+    static int disjoint_arrays(int arr1[], int arr2[], int n, int m)
+    {
+        int i,j;
+        for(i = 0;i<n;i++)
+        {
+            for(j=0;j<m;j++)
+            {
+                if(arr1[i] == arr2[j])
+                    return -1;
+            }
+        }
+        return 1;
+    }
+
+    public static void main (String[] args)
+    {
+        int m,n,i;
+        int arr1[] = new int[10];
+        int arr2[] = new int[10];
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“Enter the size of array 1 : “);
+        m = sc.nextInt();
+        System.out.print(“Enter the size of array 2 : “);
+        n = sc.nextInt();
+        System.out.print(“Input the array 1 elements : “);
+        for(i=0;i<n;i++)
+        {
+            arr1[i] = sc.nextInt();
+        }
+        System.out.print(“Input the array 2 elements : “);
+        for(i=0;i<m;i++)
+        {
+            arr2[i] = sc.nextInt();
+        }
+        int res = disjoint_arrays(arr1,arr2,n,m);
+        if(res == -1)
+            System.out.print(“\nThe arrays are not disjoint\n”);
+        else
+            System.out.print(“\nThe arrays are disjoint\n”);
+    }
+}
+

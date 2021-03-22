@@ -1,0 +1,44 @@
+// Arranging of flower sticks in a boquet – Java code
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int n,k;
+        System.out.println(“Enter the values of n and k: “);
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        k = sc.nextInt();
+        int arr[] = new int [n];
+        System.out.println(“Enter all the elements:”);
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        arrange(n,k,arr);
+    }
+
+    private static void arrange(int n, int k, int arr[])
+    {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i + 1; j < n; j++)
+            {
+                if (arr[i] > arr[j])
+                {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        for(int i=0;i<k;i++)
+            System.out.print(arr[i]);
+        for(int i=n-1;i>=k;i–)
+            System.out.print(arr[i]);
+    }
+}
+
