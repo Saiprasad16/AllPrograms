@@ -1,0 +1,26 @@
+// C program to check whether the number is automorphic or not
+
+#include<stdio.h>
+
+bool isAutomorphic(int N)
+{
+    int sq = N * N;
+    while (N > 0)
+    {
+        if (N % 10 != sq % 10)
+            return false;
+        // Reduce N and square
+        N /= 10;
+        sq /= 10;
+    }
+    return true;
+}
+
+int main()
+{
+    //Fill the code
+    int N;
+    scanf(“%d”,&N);
+    isAutomorphic(N) ? printf(“Automorphic”) : printf(“Not Automorphic”);
+    return 0;
+}

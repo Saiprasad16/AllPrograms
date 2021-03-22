@@ -1,0 +1,22 @@
+# Python program to check whether the number is automorphic or not
+
+def isAutomorphic(N) :
+    # Store the square
+    sq = N * N
+
+    # Comparing digits
+    while (N > 0) :
+        if (N % 10 != sq % 10) :
+            return False
+
+        # Reduce N and square
+        N = int(N/10)
+        sq = int(sq/10)
+
+        return True
+
+    N = int(input())
+    if isAutomorphic(N) :
+        print (“Automorphic”)
+        else :
+            print (“Not Automorphic”)

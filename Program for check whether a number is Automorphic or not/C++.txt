@@ -1,0 +1,30 @@
+// C++ program to check whether the number is automorphic or not
+
+#include<iostream>
+using namespace std;
+
+bool isAutomorphic(int N)
+{
+    int sq = N * N;
+
+    while (N > 0)
+    {
+        if (N % 10 != sq % 10)
+            return false;
+
+        // Reduce N and square
+        N /= 10;
+        sq /= 10;
+    }
+
+    return true;
+}
+
+int main()
+{
+    //Fill the code
+    int N;
+    cin >> N;
+    isAutomorphic(N) ? cout << “Automorphic” : cout << “Not Automorphic”;
+    return 0;
+}

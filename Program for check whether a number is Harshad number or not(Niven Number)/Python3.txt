@@ -1,0 +1,13 @@
+# Python program to check whether a number is a Harshad number or not
+
+num = int(input())
+sum = 0
+temp = num
+while(temp > 0):
+    sum += temp % 10
+    temp = int(temp / 10)
+    res = num % sum
+    if(res == 0):
+        print(“Harshad Number”);
+        else:
+	print(“Not Harshad Number”);
