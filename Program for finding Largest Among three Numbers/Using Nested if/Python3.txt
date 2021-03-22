@@ -1,0 +1,14 @@
+# Python program to find the largest among three numbers using nested-if
+print(“Enter three numbers : “)
+a = int(input())
+b = int(input())
+c = int(input())
+if(a > b and a > c):
+    print(“The largest among the three numbers is “,end = ”)
+    print(a)
+    elif(b > c and b > c):
+        print(“The largest among the three numbers is “,end = ”)
+        print(b)
+        else:
+            print(“The largest among the three numbers is “,end = ”)
+    print(c)

@@ -1,0 +1,29 @@
+matrix=[]
+row=int(input(“Enter number of rows: “))
+column=int(input(“Enter number of columns: “))
+for i in range(row):
+    matrix.append([])
+    for j in range(column):
+        num=int(input(“Enter the element: “))
+        matrix[i].append(num)
+        print(‘\n’)
+        print(“Input matrix: “)
+        for i in range (row):
+            for j in range (column):
+                print (matrix[i][j], end=” “)
+                print(‘\n’)
+
+                transpose=[]
+                for j in range(column):
+                    transpose.append([])
+                    for i in range (row):
+                        t_num=matrix[i][j]
+                        transpose[j].append(t_num)
+
+                        print(‘\n’)
+                        print(“Transpose matrix: “)
+                        for i in range (row):
+                            for j in range (column):
+                                print (transpose[i][j], end=” “)
+                                print(‘\n’)
+

@@ -1,0 +1,7 @@
+# Python program to find whether an integer is positive or negative
+
+num = int(input())
+if(num > 0):
+    print(“Positive”)
+    else:
+	print(“Negative”)

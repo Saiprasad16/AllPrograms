@@ -1,0 +1,25 @@
+import math
+print(“Enter co-efficients a, b and c : “)
+a = int(input())
+b = int(input())
+c = int(input())
+discriminant = b*b-4*a*c
+# condition for real and different roots
+if(discriminant > 0):
+    # sqrt() function returns square root
+    root1 = (-b+math.sqrt(discriminant))/(2*a)
+    root2 = (-b-math.sqrt(discriminant))/(2*a)
+
+    print(“root1 = “,root1,”and root2 = “,root2)
+
+    # condition for real and equal roots
+    elif(discriminant == 0):
+        root1 = root2 = -b/(2*a);
+        print(“root1 = root2 = “,root1 )
+
+        # if roots are not real
+        else:
+            realPart = -b/(2*a)
+            imaginaryPart = math.sqrt(-discriminant)/(2*a)
+            print(“root1 = “,realPart,”+”,imaginaryPart,”and root2 = “,realPart,”+”,imaginaryPart)
+

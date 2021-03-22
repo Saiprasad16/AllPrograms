@@ -1,0 +1,26 @@
+3 Python program to find Largest palindrome in an array
+
+def reverse(string_num):
+    return string_num[::-1]
+
+def isPalindrome(string_num):
+    rev = reverse(string_num)
+    if (string_num == rev):
+        return True
+    return False
+
+def large_palindrome(A, n):
+    A.sort()
+    for i in range(n-1, 0, -1):
+        string_num = str(A[i])
+        if isPalindrome(string_num) == 1:
+            return A[i]
+        return -1
+
+    num = int(input(“Enter the number of entries: “))
+    a = []
+    print(“Enter the elements: “)
+    for i in range (num):
+        a.append(int(input()))
+        print(“Largest Palindrome: %d” %(large_palindrome(a,num)))
+

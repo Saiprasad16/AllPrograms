@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int find_factors(int num)
+{
+    for (int i=1; i<=sqrt(num); i++)
+    {
+        if (num % i == 0)
+        {
+            if (num/i == i)
+                cout << i << ” “;
+
+            else
+                cout << ” ” << i << ” ” << num/i;
+        }
+    }
+}
+
+int main()
+{
+    int num;
+    cout << “\nEnter the number : “;
+    cin >> num;
+    int i;
+    cout << “\nThe factors of ” << num << ” are : “;
+    find_factors(num);
+
+}
+

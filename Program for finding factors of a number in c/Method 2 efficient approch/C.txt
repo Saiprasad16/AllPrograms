@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int find_factors(int num)
+{
+    for (int i=1; i<=sqrt(num); i++)
+    {
+        if (num % i == 0)
+        {
+            if (num/i == i)
+                printf(“%d “, i);
+
+            else
+                printf(“%d %d “, i, num/i);
+        }
+    }
+}
+
+int main()
+{
+    int num;
+    printf(“\nEnter the number : “);
+    scanf(“%d”,&num);
+    int i,count = 0;
+    printf(“\nThe factors of %d are : “,num);
+    find_factors(num);
+
+}
+

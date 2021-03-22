@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int m, n, c, d, matrix[10][10], transpose[10][10];
+    cin >> m >> n;
+    for (c = 0; c < m; c++)
+        for(d = 0; d < n; d++)
+            cin >> matrix[c][d];
+    for (c = 0; c < m; c++)
+        for( d = 0 ; d < n ; d++ )
+            transpose[d][c] = matrix[c][d];
+    for (c = 0; c < n; c++) {
+        for (d = 0; d < m; d++)
+            cout << transpose[c][d] << ” “;
+        cout << “\n”;
+    }
+    return 0;
+}
+

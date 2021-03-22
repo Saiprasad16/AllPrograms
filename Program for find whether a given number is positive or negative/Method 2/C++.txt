@@ -1,0 +1,13 @@
+// C++ program to find whether a number is positive or negative
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    //Fill the code
+    int num;
+    cin >> num;
+    num > 0? cout << “Positive” : cout << “Negative”;
+    return 0;
+}

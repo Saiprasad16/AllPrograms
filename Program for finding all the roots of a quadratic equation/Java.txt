@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+        double a, b, c, discriminant, root1, root2, realPart, imaginaryPart;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextDouble();
+        b = sc.nextDouble();
+        c = sc.nextDouble();
+        discriminant = b*b-4*a*c;
+
+        // condition for real and different roots
+        if (discriminant > 0)
+        {
+            // sqrt() function returns square root
+            root1 = (-b+Math.sqrt(discriminant))/(2*a);
+            root2 = (-b-Math.sqrt(discriminant))/(2*a);
+
+            System.out.print(“root1 = ” + root1 + “and root2 = ” + root2);
+        }
+
+        //condition for real and equal roots
+        else if (discriminant == 0)
+        {
+            root1 = root2 = -b/(2*a);
+            System.out.print(“root1 = root2 = ” + root1 );
+
+        }
+
+        // if roots are not real
+        else
+        {
+            realPart = -b/(2*a);
+            imaginaryPart = Math.sqrt(-discriminant)/(2*a);
+            System.out.print(“root1 = ” + realPart + “+” + imaginaryPart + “and root2 = ” + realPart + “+” + imaginaryPart);
+        }
+
+
+    }
+}

@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“\nEnter a number : “);
+        num = sc.nextInt();
+        int i, count = 0;
+        System.out.print(“\nThe factors of ” + num + ” are : ” );
+        for(i = 1; i <= num; i++)
+        {
+            if(num % i == 0)
+            {
+                count = count + 1;
+                System.out.print(i + ” “);
+            }
+        }
+        System.out.print(“\nTotal factors of ” + num + ” : ” );
+        for (i=1; i<=Math.sqrt(num); i++)
+        {
+            if (num % i == 0)
+            {
+                if (num/i == i)
+                    System.out.print(” ” + i + ” ” );
+
+                else
+                    System.out.print(i + ” ” + num/i + ” “);
+            }
+        }
+
+    }
+}
+
