@@ -1,0 +1,22 @@
+#include <stdio.h>
+long int decimal_to_binary(int n)
+{
+    long int binary = 0;
+    int remainder, i = 1, flag = 1;
+    while(n != 0)
+    {
+        remainder = n % 2;
+        n /= 2;
+        binary += remainder * i;
+        i = i * 10;
+    }
+    return binary;
+}
+int main()
+{
+    int n;
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+    printf("Equivalent binary number: %d\n", decimal_to_binary(n));
+    return 0;
+}

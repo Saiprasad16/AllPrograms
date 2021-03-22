@@ -1,0 +1,18 @@
+// Python code to display array into Zigzag fashion
+
+def zigZag(arr, n):
+    flag = True
+    for i in range(n-1):
+        if flag is True:
+            if arr[i] > arr[i+1]:
+                arr[i],arr[i+1] = arr[i+1],arr[i]
+                else:
+                    if arr[i] < arr[i+1]:
+                        arr[i],arr[i+1] = arr[i+1],arr[i]
+                        flag = bool(1 – flag)
+                        print(arr)
+
+                        arr = [1,2,3,4,5,6,7]
+                        n = len(arr)
+                        zigZag(arr, n)
+

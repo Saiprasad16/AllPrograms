@@ -1,0 +1,19 @@
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+    int n, i;
+    int arr[MAX];
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+    for(i = 0; n != 0; i++)
+    {
+        arr[i] = n % 2;  //storing the remainder into an array
+        n = n / 2;
+    }
+    printf("Equivalent binary number: ");
+    for(i = i - 1; i >= 0; i--)
+    {
+        printf("%d", arr[i]);  //printing the array values in the reverse order
+    }
+}

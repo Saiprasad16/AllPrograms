@@ -1,0 +1,13 @@
+# Python program to find all symmetric pairs in an array
+
+def symmetric_array_pairs(arr1,arr2,m,n):
+    for i in range(0,m):
+        for j in range(0,n):
+            if(arr1[i] == arr2[j] and arr1[j]== arr2[i]):
+                print("(",arr1[i],",",arr1[j],")", end = " ")
+
+                arr1 = []
+                arr2 = []
+                arr1 = [1,2,3,4,5]
+                arr2 = [2,1,4,3,6]
+symmetric_array_pairs(arr1, arr2, len(arr1),len(arr2))

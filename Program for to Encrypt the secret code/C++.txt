@@ -1,0 +1,18 @@
+#include<iostream>
+#include<conio.h>
+#include<math.h>
+using namespace std;
+int main()
+{
+    unsigned long long int S, N, M;
+    unsigned long long int ans;
+    cout<<“Enter the values of S, N, M:”<<endl;
+    cin>>S>>N>>M;
+    ans = pow(S,N);
+    ans = ans·;
+    ans = pow(ans,M);
+    ans = ans·00000007;
+    cout<<“Answer: “<<ans;
+    return 0;    
+}
+

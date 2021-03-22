@@ -1,0 +1,37 @@
+// C++ program to find all symmetric pairs in an array using hashing
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void find_symmetric_pairs(int arr[][2], int row)
+{
+    // Create an empty hashMap
+    unordered_map<int, int> hashMap;
+
+    // Traverse through the array
+    for (int i = 0; i < row; i++)
+    {
+        // First element as key and second as value from each pair
+        int first = arr[i][0];
+        int second = arr[i][1];
+
+        // If found and value in hash matches with first element of this pair, we found symmetry
+        if (hashMap.find(second) != hashMap.end() && hashMap[second] == first)
+            cout << “(” << second << “, ” << first << “)” << ” “;
+
+        else // Else put the second element of this pair in hash table
+            hashMap[first] = second;
+    }
+}
+
+int main()
+{
+    int arr[5][2];
+    arr[0][0] = 1; arr[0][1] = 2;
+    arr[1][0] = 3; arr[1][1] = 4;
+    arr[2][0] = 5; arr[2][1] = 6;
+    arr[3][0] = 2; arr[3][1] = 1;
+    arr[4][0] = 4; arr[4][1] = 3;
+    cout << “Symmetric pairs : “;
+    find_symmetric_pairs(arr, 5);
+} 

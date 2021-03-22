@@ -1,0 +1,9 @@
+S = int(input(“Enter the value of S: “))
+N = int(input(“Enter the value of N: “))
+M = int(input(“Enter the value of M: “))
+ans = S ** N
+ans = ans%10
+ans = ans ** M
+ans = ans % 1000000007
+print(ans)
+

@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
+int n = atoi(argv[1]);
+long int binary = 0;
+int remainder, i, flag = 1;
+for(i = 1; n != 0; i = i * 10)
+{
+remainder = n % 2;
+n /= 2;
+binary += remainder * i;
+}
+printf("Equivalent binary number: %d", binary);
+}

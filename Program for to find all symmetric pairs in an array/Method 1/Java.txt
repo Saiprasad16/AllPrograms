@@ -1,0 +1,30 @@
+// Java program to find all symmetric pairs in an array
+
+import java.util.*;
+public class Main
+{
+    static void symmetric_array_pair(int arr1[], int arr2[], int m, int n)
+    {
+        int i,j;
+        for(i=0;i<m;i++)
+        {
+            for(j=0;j<m;j++)
+            {
+                if(arr1[i] == arr2[j] && arr1[j]== arr2[i])
+                {
+                    System.out.print("(" + arr1[i] + ","+ arr1[j] + ")");
+                    continue;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        int arr1[] = {1,2,3,4,5};
+        int arr2[] = {2,1,4,3,6};
+        int m = arr1.length;
+        int n = arr2.length;
+        symmetric_array_pair(arr1,arr2,m,n);
+    }
+}
