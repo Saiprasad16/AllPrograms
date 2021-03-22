@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <conio.h>  
+#define SIZE 10
+
+void sort_matrix(int a[SIZE][SIZE], int n)
+{
+
+    int temp[n * n];
+    int k = 0;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            temp[k++] = a[i][j];
+
+    // sort temp[]
+    sort(temp, temp + k);
+
+
+    k = 0;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            a[i][j] = temp[k++];
+}
+
+void display(int a[SIZE][SIZE], int n)
+{
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++)
+            cout << a[i][j] << ” “;
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int a[SIZE][SIZE],n, i, j;
+    scanf(“%d, &n”);
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+            scanf(%d, &a[i][j]);
+    }
+
+    sort_matrix(a, n);
+    display(a, n);
+
+    return 0;
+}
+

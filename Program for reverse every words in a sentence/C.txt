@@ -1,0 +1,24 @@
+// C program to reverse every words in a sentence using recursion
+
+#include
+
+#include
+void rev_sent();
+int main()
+{
+    rev_sent();
+    return 0;
+}
+
+void rev_sent()
+{
+    char c;
+    scanf(“%c”, &c);
+
+    // call rev_sent() when the character is not null
+    if( c != ‘\n’)  
+    {
+        rev_sent();
+        printf(“%c”,c);  // Print the character inside
+    }
+}

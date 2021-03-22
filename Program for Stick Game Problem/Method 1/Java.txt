@@ -1,0 +1,31 @@
+/* Java program for stick game problem */
+
+import java.util.*;
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+        int m, n, res;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“\nEnter the grids : “);
+        m = sc.nextInt();
+        n = sc.nextInt();
+        if(n < m)
+        {
+            res = n;
+        }
+        else
+        {
+            res = m;
+        }
+        if(res % 2 == 0)
+        {
+            System.out.print(“\nWinner – Mani Iyer”);
+        }
+        else
+        {
+            System.out.print(“\nWinner – Arun Gupta”);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+# Python program for sticks game problem
+
+print(“Enter the grids : “)
+m = int(input())
+n = int(input())
+if(n < m):
+    res = n;
+
+    else:
+        res = m;
+
+        if(res % 2 == 0):
+            print(“\nWinner – Mani Iyer”)
+
+            else:
+print(“\nWinner – Arun Gupta”)
