@@ -1,0 +1,46 @@
+// Java program to check if all the numbers of an array are equal
+
+import java.util.*;
+public class Main
+{
+    public static boolean make_equal(int a[], int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            // Divide number by 2
+            while (a[i] % 2 == 0)
+                a[i] /= 2;
+
+            // Divide number by 3
+            while (a[i] % 3 == 0)
+                a[i] /= 3;
+        }
+        // Remaining numbers
+        for (int i = 1; i < n; i++)
+            if (a[i] != a[0])
+            {
+                return false;
+            }
+        return true;
+    }
+
+    public static void main (String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int num,i;
+        System.out.println(“Enter the number of entries: “);
+        num = sc.nextInt();
+        int a[] = new int[num];
+        System.out.println(“Enter the elements: “);
+        for(i=0; i<num; i++)
+        {
+            a[i] = sc.nextInt();
+        }
+        if (make_equal(a, num))
+            System.out.println(“Yes”);
+        else
+            System.out.println(“No”);
+    }
+
+}
+

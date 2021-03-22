@@ -1,0 +1,14 @@
+# Python program to convert a binary number into decimal number
+
+import math
+n = int(input(“Enter the binary number : “))
+decimal = 0
+remainder = 0
+i = 0
+while (n!=0):
+    remainder = n
+    n = int(n / 10)
+    decimal = decimal + remainder*math.pow(2,i)
+    i = i + 1
+    print(“Decimal Number : “,int(decimal))
+

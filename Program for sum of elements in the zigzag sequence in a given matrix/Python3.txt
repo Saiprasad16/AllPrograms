@@ -1,0 +1,31 @@
+# Python Program to print the sum of elements in the Zigzag sequence in a given matrix
+
+mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+sum = 0
+row1 = 0
+col_n = 0
+diag = 0
+m = 3
+n = 3
+for i in range(0):
+    for j in range(0, n-1):
+        row1 = row1 + mat[i][j]
+
+        for i in range(0,1):
+            for j in range(0, n-1):
+                row1 = row1 + mat[i][j]
+
+                for j in range(n-1, n-2, -1):
+                    for i in range(0, m):
+                        col_n = col_n + mat[j][i]
+
+                        for i in range(0, m):
+                            for j in range(0, n):
+                                if ((i + j) == (m – 1)):
+                                    diag = diag + mat[i][j]
+                                    if(j == 0 and i == m-1):
+                                        col_n = col_n – mat[i][j]
+
+
+                                        sum = diag + row1 + col_n;
+print(“Sum of Zig-Zag pattern is “, sum)

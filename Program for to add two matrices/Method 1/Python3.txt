@@ -1,0 +1,27 @@
+# Python program to add two matrices
+
+N = 3
+# Fucntion to perform addition of matrices
+def add(A,B,C):
+
+    for i in range(N):
+        for j in range(N):
+            C[i][j] = A[i][j] + B[i][j]
+
+            A = [ [1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]]
+
+            B = [ [1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]]
+
+            C=A[:][:] # To store the result
+
+            add(A, B, C)
+
+            print(“Result matrix is”)
+            for i in range(N):
+                for j in range(N):
+                    print(C[i][j], ” “, end=”)
+print()
