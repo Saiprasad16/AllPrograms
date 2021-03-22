@@ -1,0 +1,86 @@
+/* C Program to find the array type (even, odd or mixed array) */
+#include<stdio.h>
+int main()
+{
+    //fill the code;
+    int n;
+    scanf(“%d”,&n);
+    int arr[n];
+    int i;
+    int odd = 0, even = 0;
+    for(i = 0; i < n; i++)
+    {
+        scanf(“%d”,&arr[i]);
+    }
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] % 2 == 1)
+            odd++;
+        if(arr[i] % 2 == 0)
+            even++;
+    }
+    if(odd == n)
+        printf(“Odd”);
+    else if(even == n)
+        printf(“Even”);
+    else
+        printf(“Mixed”);
+    return 0;
+}
+
+//Solution to the problem statement using C pointers
+#include<stdio.h>
+#include<stdlib.h>
+int*createArray (int);
+void readArray(int,int *);
+int findType(int , int *);
+int main()
+{
+    int *a,n,c=0,d=0;
+    printf(“Enter the size of array\n”);
+    scanf(“%d”,&n);
+    printf(“Enter the elements of array\n”);
+    createArray(n);
+    readArray(n,a);
+    findType(n,a);
+    return 0;
+}
+int *createArray(int n)
+{
+    int *a;
+    a=(int*)malloc(n*sizeof(int));
+    return a;
+}
+void readArray(int n,int *a)
+{
+    for(int i=0;i<n;i++)
+    {
+        scanf(“%d”,a+i);
+    }}
+int findType(int n, int *a)
+{
+    int c=0,d=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]%2==0)
+        {
+            c++;
+        }
+        else
+        {
+            d++;
+        }}
+    if(c==n)
+    {
+        printf(“The array type is Even\n”);
+    }
+    if(d==n)
+    {
+        printf(“The array type is Odd\n”);
+    }
+    if(c!=n && d!=n)
+    {
+        printf(“The array type is Mixed\n”);
+    }
+
+return 0; }

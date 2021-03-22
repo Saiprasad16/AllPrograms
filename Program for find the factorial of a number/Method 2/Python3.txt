@@ -1,0 +1,13 @@
+def factorial_of_the_number(n):
+    if(n == 0):
+        return 1
+    fact = 1
+    for i in range(1, n + 1):
+        fact = fact * i
+        return fact
+
+    n = int(input("Enter the number : "))
+    if(n < 0):
+        print ("Invalid input")
+        else:
+            print(factorial_of_the_number(n))

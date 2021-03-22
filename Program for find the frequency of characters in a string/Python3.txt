@@ -1,0 +1,14 @@
+# Python program to find the frequency of characters in a string
+
+import numpy as np
+str = input(“Enter a string : “)
+n = len(str)
+freq = np.zeros(26, dtype = np.int) # initializing
+for i in range(0, n) :
+    freq[ord(str[i]) – ord(‘a’)] += 1
+    print(“Frequency of characters : “)
+    for i in range(0, n) :
+        if (freq[ord(str[i])- ord(‘a’)] != 0) :
+            print (str[i], “–>”, freq[ord(str[i]) – ord(‘a’)])
+            freq[ord(str[i]) – ord(‘a’)] = 0
+

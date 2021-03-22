@@ -1,0 +1,28 @@
+// Java program to find the frequency of characters in a string
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        String str;
+        int MAX = 26;
+        System.out.print(“\nEnter the string : “);
+        Scanner sc = new Scanner(System.in);
+        str = sc.nextLine();
+        int n = str.length();
+        int[] freq = new int[MAX];
+        System.out.println(“Frequency of characters :”);
+        for (int i = 0; i < n; i++)
+            freq[str.charAt(i) – ‘a’]++;
+        for (int i = 0; i < n; i++)
+        {
+            if (freq[str.charAt(i) – ‘a’] != 0)
+            {
+                System.out.println(str.charAt(i) + “–>” + freq[str.charAt(i) – ‘a’]);
+                freq[str.charAt(i) – ‘a’] = 0;
+            }
+        }
+    }
+}

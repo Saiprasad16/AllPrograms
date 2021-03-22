@@ -1,0 +1,31 @@
+// C++ program to find the frequency of characters in the string
+
+#include <bits/stdc++.h>
+using namespace std;
+#define MAX 26
+
+int main()
+{
+    string str;
+    cout << “\nEnter the string : “;
+    cin >> str;
+    int n = str.size();
+    int frequency[MAX];
+    cout <<“\nFrequency of characters :\n”;
+    memset(frequency, 0, sizeof(frequency)); // initializing frequency of all elements to zero
+
+    for (int i = 0; i < n; i++)
+        frequency[str[i] – ‘a’]++;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (frequency[str[i] – ‘a’] != 0)
+        {
+            cout << str[i] << ” –> “<< frequency[str[i] – ‘a’] << endl;
+            frequency[str[i] – ‘a’] = 0;
+        }
+    }
+    cout << endl;
+    return 0;
+}
+

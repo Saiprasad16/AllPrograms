@@ -1,0 +1,46 @@
+// C program to find the frequency of characters in the string
+
+#include <stdio.h>
+#include <string.h>
+#define MAX 50
+
+int main()
+{
+    char str[MAX];
+    int i, len;
+    int frequency[26];
+
+    printf(“Enter the string: “);
+    gets(str);
+
+    len = strlen(str);
+
+    for(i=0; i<26; i++)
+    {
+        frequency[i] = 0;
+    }
+
+    for(i=0; i<len; i++)
+    {
+        if(str[i]>=’a’ && str[i]<=’z’)
+        {
+            frequency[str[i] – 97]++;
+        }
+        else if(str[i]>=’A’ && str[i]<=’Z’)
+        {
+            frequency[str[i] – 65]++;
+        }
+    }
+
+    printf(“\nFrequency of characters : \n”);
+    for(i=0; i<26; i++)
+    {
+        if(frequency[i] != 0)
+        {
+            printf(“%c –> %d\n”, (i + 97), frequency[i]);
+        }
+    }
+
+    return 0;
+}
+

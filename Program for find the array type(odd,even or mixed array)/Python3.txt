@@ -1,0 +1,19 @@
+# Python program find the array type (even, odd or mixed array)
+n = int(input())
+arr = []
+for i in range(0,n):
+    temp = int(input())
+    arr.append(temp)
+    odd = 0
+    even = 0
+    for i in range(0,n):
+        if(arr[i] % 2 == 1):
+            odd = odd + 1
+            else:
+                even = even + 1
+                if(odd == n):
+                    print(“Odd”)
+                    elif(even == n):
+                        print(“Even”)
+                        else:
+	print(“Mixed”);
