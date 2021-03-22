@@ -1,0 +1,84 @@
+// Java program to find the number of times digit 3 occurs in each and every number from 0 to n
+
+import java.util.*;
+
+public class Main
+
+{
+
+    static int fact(int x)
+
+    {
+
+        int f=1,i;
+
+        for(i=1;i<=x;i++)
+
+        {
+
+            f=f*i;
+
+        }
+
+        return f;
+
+    } 
+
+
+
+    public static void main(String[] args) 
+
+    {
+
+        int n,r,p,temp;
+
+        int num,den;
+
+        Scanner sc = new Scanner(System.in);
+
+
+
+        // Enter the number of seats
+
+        System.out.print(“nEnter the number of seats available : “);
+
+        r = sc.nextInt();
+
+
+
+        // Enter the number of people
+
+        System.out.print(“nEnter the number of persons : “);
+
+        n = sc.nextInt();
+
+
+
+        // Base condition
+
+        // Swap n and r
+
+        if(n < r)
+
+        {
+
+            temp=n;
+
+            n=r;
+
+            r=temp;
+
+        }
+
+        num=fact(n);
+
+        den=fact(n-r);
+
+        p=num/den;
+
+        System.out.print(“nNumber of ways people can be seated : ” + p);
+
+    }
+
+}
+

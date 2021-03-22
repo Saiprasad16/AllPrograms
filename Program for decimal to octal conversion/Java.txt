@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+    public static int decimal_to_octal(int decimal)
+    {
+        int octal = 0, i = 1;
+
+        while (decimal != 0)
+        {
+            octal += (decimal % 8) * i;
+            decimal /= 8;
+            i *= 10;
+        }
+
+        return octal;
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“Enter the decimal number : “);
+        int decimal = sc.nextInt();
+        System.out.print(“\nEquivalent octal number : ” + decimal_to_octal(decimal));
+    }
+}
+

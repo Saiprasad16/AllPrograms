@@ -1,0 +1,18 @@
+// C++ program to display multiplication table of a given number
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    //fill the code
+    int num, end;
+    cin >> num;
+    cin >> end;
+    int i;
+    for(i = 1; i <= end; i++)
+    {
+        cout << num << ” * ” << i << ” = ” << num*i << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(int argc, char *argv[])
+{
+int sum = 0, n;
+int a = 0;
+int b = 1;
+n = atoi(argv[1]);
+while(sum <= n)
+{
+printf("%d ", sum);
+a = b; // swap elements
+b = sum;
+sum = a + b; // next term is the sum of the last two terms 
+}
+return 0;
+}

@@ -1,0 +1,18 @@
+// Java program to display multiplication table of a given number
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int num, end;
+        Scanner sc = new Scanner(System.in);
+        num = sc.nextInt();
+        end = sc.nextInt();
+        int i;
+        for(i = 1; i <= end; i++)
+        {
+            System.out.println(num + ” * ” + i + ” = ” + num*i);
+        }
+    }
+}

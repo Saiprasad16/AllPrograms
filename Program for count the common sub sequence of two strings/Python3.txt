@@ -1,0 +1,42 @@
+# Python program to count the common sub sequence of two strings
+
+def count_common_sub_sequence(s1, s2):
+
+    n1 = len(s1) 
+
+    n2 = len(s2) 
+
+    arr = [[0 for i in range(n2 + 1)] 
+
+           for i in range(n1 + 1)]
+
+    # for each character of S1 
+
+    for i in range(1, n1 + 1):
+
+        # for each charcater in S2 
+
+        for j in range(1, n2 + 1):
+
+            # If character are same in both the string 
+
+            if (s1[i – 1] == s2[j – 1]): 
+
+                arr[i][j] = (1 + arr[i][j – 1] +
+
+                             arr[i – 1][j]) 
+
+                else: 
+
+                    arr[i][j] = (arr[i][j – 1] + arr[i – 1][j] –
+
+                                 arr[i – 1][j – 1]) 
+
+
+                    return arr[n1][n2]
+
+                s1 = input(“Enter string 1 : “)
+
+                s2 = input(“Enter string 2 : “)
+
+print(“nCount of common sub sequence of two strings : “, count_common_sub_sequence(s1, s2))

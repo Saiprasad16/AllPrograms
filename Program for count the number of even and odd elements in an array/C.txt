@@ -1,0 +1,66 @@
+/* C program to count the number of even and odd elements in an array */
+#include
+int main()
+{
+    //fill your code
+    int n;
+    scanf(“%d”,&n);
+    int arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        scanf(“%d”,&arr[i]);
+    }
+    int count_odd =0, count_even = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if(arr[i] % 2 == 1)
+            count_odd++;
+        else
+            count_even++;
+    }
+    printf(“Odd: %d”,count_odd);
+    printf(“\nEven: %d”,count_even);
+    return 0;
+}
+
+// Solution to the problem statement using C pointers.
+
+#include<stdio.h>
+#include<stdlib.h>
+int countEven(int n, int *a)
+{
+    int Even=0;
+    for(int i=0;i<n;i++)
+    {
+        if(*(a+i)%2==0)
+        {
+            Even++;
+        }
+    }
+    return Even;
+}
+int countOdd(int n,int*a)
+{
+    int Odd=0;
+    for(int i=0;i<n;i++)
+    {
+        if(*(a+i)%2!=0)
+        {
+            Odd++;
+        }
+    }return Odd;
+}
+int main()
+{
+    int *a,n,Even=0,Odd=0;
+    scanf(“%d”,&n);
+    a=(int*)malloc(n*sizeof(int));
+    for(int i=0;i<n;i++)
+    {
+        scanf(“%d”,(a+i));
+    }
+    printf(“Odd:%d\n”,countOdd(n,a));
+    printf(“Even:%d”,countEven(n,a));
+
+    return 0;
+}
