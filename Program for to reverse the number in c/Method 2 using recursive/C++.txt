@@ -1,0 +1,28 @@
+// C++ program to reverse a number using recursion
+
+#include <bits/stdc++.h>
+using namespace std;
+
+/* Recursive approach to reverse digits of num*/
+int reverse_digits(int num)
+{
+    static int rev_num = 0;
+    static int base_pos = 1;
+    if(num > 0)
+    {
+        reverse_digits(num/10);
+        rev_num += (num)*base_pos;
+        base_pos *= 10;
+    }
+    return rev_num;
+}
+
+int main()
+{
+    int num;
+    cout << “\nEnter a number : “;
+    cin >> num;
+    cout << “Reversed number : ” << reverse_digits(num);
+
+    return 0;
+}

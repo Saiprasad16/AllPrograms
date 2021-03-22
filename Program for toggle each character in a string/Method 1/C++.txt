@@ -1,0 +1,32 @@
+// C++ program to toggle each character in a string
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+#define MAX_SIZE 100
+
+void toggleCase(char * str);
+
+int main()
+{
+    char str[MAX_SIZE];
+    cout << “nEnter the string : “;
+    scanf(“%[^n]s”, &str);
+    toggleCase(str);
+    cout << “nReplaced string after toggling characters : “;
+    cout << str << endl;
+    return 0;
+}
+
+void toggleCase(char * str)
+{
+    while(*str)
+    {
+        if(*str >= ‘a’ && *str <= ‘z’)
+            *str = *str – 32;
+        else if(*str >= ‘A’ && *str <= ‘Z’)
+            *str = *str + 32;
+        str++;
+    }
+}

@@ -1,0 +1,27 @@
+// C program to reverse a number using recursion
+
+#include
+
+/* Recursive approach to reverse digits of num*/
+int reverse_digits(int num)
+{
+    static int rev_num = 0;
+    static int base_pos = 1;
+    if(num > 0)
+    {
+        reverse_digits(num/10);
+        rev_num += (num%10)*base_pos;
+        base_pos *= 10;
+    }
+    return rev_num;
+}
+
+int main()
+{
+    int num;
+    printf(“\nEnter a number : “);
+    scanf(“%d”,&num);
+    printf(“Reversed number : %d “,reverse_digits(num));
+
+    return 0;
+}

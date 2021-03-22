@@ -1,0 +1,17 @@
+# Python program to reverse a number using recursion
+
+rev_num = 0
+base = 1
+
+# Recursive function to reverse a number
+def reverse_digits(num):
+    global rev_num
+    global base
+    if(num > 0):
+        reverse_digits((int)(num / 10))
+        rev_num += (num % 10) * base
+        base *= 10
+        return rev_num
+
+    num = 1907
+print(“Reversed number is “, reverse_digits(num))

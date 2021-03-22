@@ -1,0 +1,11 @@
+# Python program to reverse an array
+
+n = int(input())
+sum = 0
+arr = []
+for i in range(0,n):
+    temp = int(input())
+    arr.append(temp)
+    print(“Reversed array is : “, end = “”)
+    for i in range(n-1,-1,-1):
+print(arr[i], end = ” “)

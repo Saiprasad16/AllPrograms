@@ -1,0 +1,25 @@
+# Python program to replace all 0’s with 1 in a given integer
+
+def replace(number):
+
+    if (number == 0):
+
+        return 0;
+
+
+
+    # Extract the last digit and change it if needed
+
+    digit = number % 10
+
+    if (digit == 0):
+
+        digit = 1
+
+        # Convert remaining digits and append the last digit
+
+        return replace(int(number/10)) * 10 + digit
+
+    number = int(input(“Enter the number : “))
+
+print(“Number after replacement : “,replace(number))

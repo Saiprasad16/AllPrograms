@@ -1,0 +1,4 @@
+# Python program to toggle each character in a string
+
+str = input(“Enter a string : “)
+print(“String after the characters are toggled : “,str.swapcase())

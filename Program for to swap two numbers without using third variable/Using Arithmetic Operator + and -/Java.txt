@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter two numbers: ");
+
+        //consider two numbers as 4 and 5
+        int a = sc.nextInt(); 
+        int b = sc.nextInt();
+        a = a + b;  //a = 4 + 5 = 9
+        b = a - b;  //b = 9 - 5 = 4
+        a = a - b;  //a = 9 - 4 = 5
+        System.out.println("Numbers after swapping: " + a + " " + b);
+    }
+}

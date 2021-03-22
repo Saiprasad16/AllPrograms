@@ -1,0 +1,14 @@
+# Python program to reverse a number
+
+print(“Enter a number : “)
+n = int(input())
+rev = 0
+rem = 0
+while(n != 0):
+    rem = n
+    rev = rev*10 + rem
+    n = int(n/10)
+
+    print(“Reversed Number : “,rev)
+
+ 

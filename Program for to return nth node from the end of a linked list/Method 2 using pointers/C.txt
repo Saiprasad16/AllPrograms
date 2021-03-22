@@ -1,0 +1,88 @@
+/* C program to return nth element from the end of a linked list */
+#include
+#include
+
+/* Structure of node */
+struct Node
+{
+    int data;
+    struct Node *next;
+} *head;
+
+void initialize()
+{
+    head = NULL;
+}
+
+/* Function to insert a node in linke dlist */
+void insert(int num)
+{
+    struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+    newNode->data = num;
+    newNode->next = head;
+    head = newNode;
+}
+
+void printNthFromLast(struct Node *head, int n)
+{
+    struct Node *main_ptr = head;
+    struct Node *ref_ptr = head;
+
+    int count = 0;
+    if(head != NULL)
+    {
+        while( count < n )
+        {
+            if(ref_ptr == NULL)
+            {
+                printf(“%d is greater than the no. of “
+                       “nodes in list”, n);
+                return;
+            }
+            ref_ptr = ref_ptr->next;
+            count++;
+        } /* End of while*/
+
+        while(ref_ptr != NULL)
+        {
+            main_ptr = main_ptr->next;
+            ref_ptr = ref_ptr->next;
+        }
+        printf(“\nNth node from the end : %d \n”, n, main_ptr->data);
+    }
+}
+
+/* Prints a linked list from head node till tail node */
+void printLinkedList(struct Node *nodePtr) {
+    while (nodePtr != NULL) {
+        printf(“%d”, nodePtr->data);
+        nodePtr = nodePtr->next;
+        if(nodePtr != NULL)
+            printf(“–>”);
+    }
+}
+
+int main()
+{
+    int N, k;
+    struct node *NthNode;
+    initialize();
+    /* Creating a linked List*/
+    int new_node;
+    int i;
+    printf(“\nEnter the total number of nodes : “); /* Number of nodes */
+    scanf(“%d”,&k);
+    printf(“\nEnter the data for the nodes : “);
+    for(i = 0; i < k; i++)
+    {
+        scanf(“%d”,&new_node);
+        insert(new_node); /* Inserting the nodes */
+    }
+
+    printf(“\nLinked List : “);
+    printLinkedList(head);
+    printf(“\n\nEnter value of N : “);
+    scanf(“%d”, &N);
+    printNthFromLast(head, N);
+    return 0;
+}
