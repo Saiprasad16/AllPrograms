@@ -1,0 +1,12 @@
+/* Java Program to print the length of a string */
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String a;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextLine();
+        System.out.println(“The length of the string is ” + a.length());
+    }
+}

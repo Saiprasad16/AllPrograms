@@ -1,0 +1,13 @@
+// C program to generate tsunami report
+
+#include<stdio.h>
+int main()
+{
+    //fill the code
+    int dead, injured, safe;
+    scanf(“%d%d%d”, &dead, &injured, &safe);
+    printf(“1)Dead : %d\n2)Injured : %d\n3)Safe : %d”,dead, injured, safe);
+
+    printf(“\nPlease help the people who are suffering!!!”);
+    return 0;
+}

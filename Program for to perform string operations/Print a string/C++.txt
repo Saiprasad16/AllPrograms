@@ -1,0 +1,12 @@
+/* C++ program to print a string */
+#include <iostream>
+using namespace std;
+int main()
+{
+    string a;
+    int l;
+    cout << “\nEnter the string : “;
+    cin >> a;
+    cout << “The string is ” << a;
+    return 0;
+}

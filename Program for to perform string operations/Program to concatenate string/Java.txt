@@ -1,0 +1,15 @@
+/* Java Program to concatenate two strings */
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String a, b;
+        int i;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextLine();
+        b = sc.nextLine();
+        System.out.println(“Concatenated strings : “+ a + b);
+
+    }
+}

@@ -1,0 +1,14 @@
+// C++ program to generate tsunami report
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //fill the code
+    int dead, injured, safe;
+    cin >> dead >> injured >> safe;
+    cout <<“1)Dead : ” << dead << “\n2)Injured : ” << injured << “\n3)Safe : ” << safe;
+    cout << “\nPlease help the people who are suffering!!!”;
+    return 0;
+}

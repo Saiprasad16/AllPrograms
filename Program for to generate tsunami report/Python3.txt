@@ -1,0 +1,7 @@
+# Python program to generate tsunami report
+
+dead = int(input())
+injured = int(input())
+safe = int(input())
+print(“1)Dead :”, dead,”\n2)Injured :”, injured,”\n3)Safe :” ,safe);
+print(“Please help the people who are suffering!!!”)

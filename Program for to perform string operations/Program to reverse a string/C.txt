@@ -1,0 +1,16 @@
+/* C program to reverse a string */
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[100], b[100];
+    int l;
+    scanf(“%s”,&a);
+    int i;
+    printf(“Reversed String : “);
+    for(i = strlen(a); i >= 0; i–)
+    {
+        printf(“%c”,a[i]);
+    }
+    return 0;
+}

@@ -1,0 +1,4 @@
+# Python program to concatenate two strings
+a = input()
+b = input()
+print(“Concatenated strings : “,a+b)

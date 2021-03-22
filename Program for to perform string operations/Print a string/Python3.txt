@@ -1,0 +1,4 @@
+# Python program to print a string
+
+a = input()
+print(“The string is”,a)

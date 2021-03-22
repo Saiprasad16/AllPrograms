@@ -1,0 +1,15 @@
+/* C++ program to compare two strings */
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str1[100], str2[100];
+    cin >> str1 >> str2;
+    strcmp(str1,str2);
+    if(strcmp(str1,str2) == 0)
+        cout << “The strings are equal”;
+    else
+        cout << “The strings are not equal”;
+    return 0;
+}

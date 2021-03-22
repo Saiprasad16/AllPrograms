@@ -1,0 +1,17 @@
+// Java program to generate tsunami report
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int dead, injured, safe;
+        Scanner sc = new Scanner(System.in);
+        dead = sc.nextInt();
+        injured = sc.nextInt();
+        safe = sc.nextInt();
+        System.out.print(“1)Dead : ” + dead + “\n2)Injured : ” + injured + “\n3)Safe : ” + safe);
+        System.out.print(“\nPlease help the people who are suffering!!!”);
+    }
+}

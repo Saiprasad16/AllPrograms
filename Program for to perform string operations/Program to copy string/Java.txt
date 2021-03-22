@@ -1,0 +1,13 @@
+/* Java Program to copy a string */
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String a;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextLine();
+        String b = new String(a);
+        System.out.println(“String 1 : ” + a + “\nString 2 : ” + b);
+    }
+}

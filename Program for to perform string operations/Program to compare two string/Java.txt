@@ -1,0 +1,17 @@
+/* Java Program to compare two strings */
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String a, b;
+        int i;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextLine();
+        b = sc.nextLine();
+        if(a.equals(b))
+            System.out.println(“The strings are equal”);
+        else
+            System.out.println(“The strings are not equal”);
+    }
+}

@@ -1,0 +1,7 @@
+# Python program to compare two strings
+a = input()
+b = input()
+if(a == b):
+    print(“The strings are equal”)
+    else:
+print(“The strings are not equal”)

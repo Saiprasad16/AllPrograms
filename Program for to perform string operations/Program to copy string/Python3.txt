@@ -1,0 +1,4 @@
+# Python program to copy a string
+a = input()
+b = a
+print(“String 1 :”,a,”\nString 2 :”,b)
