@@ -1,0 +1,17 @@
+a = int(input(“Enter the numerator for 1st number : “))
+b = int(input(“Enter the denominator for 1st number : “))
+c = int(input(“Enter the numerator for 2nd number : “))
+d = int(input(“Enter the denominator for 2nd number : “))
+x=(a*d)+(b*c) #numerator
+y=b*d #denominator
+# Trick part. Reduce it to the simplest form by using gcd.
+i = 1
+while(i <= x and i <= y):
+    if(x % i == 0 and y % i == 0):
+        gcd = i
+        i = i + 1
+
+        print(“The added fraction is”, end = ‘ ‘)
+        print(int(x/gcd),end=”)
+        print(“/”,end=”)
+print(int(y/gcd))

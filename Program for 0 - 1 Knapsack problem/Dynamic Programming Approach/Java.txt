@@ -1,0 +1,51 @@
+/* Java program – Dynamic Programming implementation of 0-1 Knapsack problem */
+
+import java.util.*;
+public class Main
+{
+    /* Function to find maximum of two integers */
+    static int max(int a, int b) { return (a > b)? a : b; }
+
+    /* Returns the maximum value that can be put in a knapsack of capacity W */
+    static int knapSack(int W, int weight[], int value[], int n)
+    {
+        int i, w;
+        int[][] K = new int[n+1][W+1];
+
+        /* Build table K[][] in bottom up manner */
+        for (i = 0; i <= n; i++)
+        {
+            for (w = 0; w <= W; w++)
+            {
+                if (i==0 || w==0)
+                    K[i][w] = 0;
+                else if (weight[i-1] <= w)
+                    K[i][w] = max(value[i-1] + K[i-1][w-weight[i-1]], K[i-1][w]);
+                else
+                    K[i][w] = K[i-1][w];
+            }
+        }
+
+        return K[n][W];
+    }
+    public static void main (String args[])
+    {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“\nEnter the number of items : “);
+        n = sc.nextInt();
+        int[] value = new int[n];
+        int[] weight = new int[n];
+        int i;
+        System.out.print(“\nEnter the item’s weight and its value \n”);
+        for(i = 0; i < n; i++)
+        {
+            weight[i] = sc.nextInt();
+            value[i] = sc.nextInt();
+        }
+        int W;
+        System.out.print(“\nEnter the capacity of the knapsack : “);
+        W = sc.nextInt();
+        System.out.print(“\nMaximum value in a 0-1 knapsack : ” + knapSack(W, weight, value, n));
+    }
+} 

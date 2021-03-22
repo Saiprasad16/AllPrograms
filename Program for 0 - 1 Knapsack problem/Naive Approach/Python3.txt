@@ -1,0 +1,16 @@
+# Python program – Naive recursive implementation of 0-1 Knapsack problem
+
+def knapSack(W , weight , value , n):
+    if n == 0 or W == 0 :
+        return 0
+
+    if (weight[n-1] > W):
+        return knapSack(W , weight , value , n-1)
+    else:
+        return max(value[n-1] + knapSack(W-weight[n-1] , weight , value , n-1), knapSack(W , weight , value , n-1))
+
+    value = [100, 50, 150]
+    weight = [20, 10, 30]
+    W = 50
+    n = len(val)
+print (“Maximum capacity : “,knapSack(W , weight , value , n) )

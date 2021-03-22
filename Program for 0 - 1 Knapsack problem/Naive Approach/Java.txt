@@ -1,0 +1,41 @@
+/* Java program – Naive recursive implementation of 0-1 Knapsack problem */
+import java.util.*;
+public class Main
+{
+    /* Function to find maximum of two integers */
+    static int max(int a, int b) { return (a > b)? a : b; }
+
+    /* Function to find the maximum value that can be put in a knapsack of capacity W */
+    static int knapSack(int W, int weight[], int value[], int n)
+    {
+        if (n == 0 || W == 0) /* Base Case */
+            return 0;
+
+        /* If weight of the nth item is more than Knapsack capacity W */
+        if (weight[n-1] > W)
+            return knapSack(W, weight, value, n-1); /* this item cannot be included in the optimal solution */
+
+        else return max( value[n-1] + knapSack(W-weight[n-1], weight, value, n-1), knapSack(W, weight, value, n-1));
+    }
+
+    public static void main (String args[])
+    {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“\nEnter the number of items : “);
+        n = sc.nextInt();
+        int[] value = new int[n];
+        int[] weight = new int[n];
+        int i;
+        System.out.print(“\nEnter the item’s weight and its value \n”);
+        for(i = 0; i < n; i++)
+        {
+            weight[i] = sc.nextInt();
+            value[i] = sc.nextInt();
+        }
+        int W;
+        System.out.print(“\nEnter the capacity of the knapsack : “);
+        W = sc.nextInt();
+        System.out.print(“\nMaximum value in a 0-1 knapsack : ” + knapSack(W, weight, value, n));
+    }
+} 
