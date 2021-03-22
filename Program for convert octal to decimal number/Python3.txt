@@ -1,0 +1,15 @@
+import math
+def octal_to_decimal(octal):
+    decimal = 0
+    i = 0
+    while(octal != 0):
+        decimal += (octal) * math.pow(8,i)
+        i = i + 1
+        octal = int(octal / 10)
+        i = 1;
+
+        return decimal
+
+    octal = int(input(“Enter the octal number : “))
+    print(“Equivalent decimal number : “,int(octal_to_decimal(octal)))
+

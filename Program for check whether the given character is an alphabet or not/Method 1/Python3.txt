@@ -1,0 +1,11 @@
+# Python program to check whether the character is an alphabet or not
+
+ch = input(“Enter any character: “);
+
+if((ch>=’a’ and ch<=’z’) or (ch>=’A’ and ch<=’Z’)):
+    print(ch,end = ” “)
+    print(“is an alphabet”)
+    else:
+        print(ch,end = ” “)
+        print(“is not an alphabet”)
+

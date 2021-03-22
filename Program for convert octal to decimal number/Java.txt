@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+    public static int octal_to_decimal(int octal)
+    {
+        int decimal = 0, i = 0;
+
+        while(octal != 0)
+        {
+            decimal += (octal) * Math.pow(8,i);
+            ++i;
+            octal/=10;
+        }
+
+        i = 1;
+
+        return decimal;
+    }
+
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“Enter the octal number : “);
+        int octal = sc.nextInt();
+        System.out.print(“\nEquivalent decimal number : ” + octal_to_decimal(octal));
+    }
+}
+

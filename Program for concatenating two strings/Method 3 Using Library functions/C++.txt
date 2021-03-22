@@ -1,0 +1,16 @@
+// C++ program to concatenate two strings using library functions
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str1[100], str2[100], i, j;
+    cout << “\nEnter first string: “;
+    cin >> str1;
+    cout << “\nEnter second string: “;
+    cin >> str2;
+    cout << “Resultant string : ” << strcat(str1,str2);
+    return 0;
+}
+

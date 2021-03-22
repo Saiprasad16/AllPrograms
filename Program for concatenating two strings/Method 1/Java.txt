@@ -1,0 +1,17 @@
+// Java program to concatenate two strings
+
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        String str1, str2;
+        System.out.print(“\nEnter first string : “);
+        Scanner sc = new Scanner(System.in);
+        str1 = sc.nextLine();
+        System.out.print(“\nEnter second string : “);
+        str2 = sc.nextLine();
+        System.out.println(“Resultant string : ” + str1+str2);
+    }
+}
+

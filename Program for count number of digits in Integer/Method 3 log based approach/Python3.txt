@@ -1,0 +1,8 @@
+import math
+def number_of_digits(n):
+    return math.floor(math.log(n, 10)+1)
+
+n = int(input(“Enter a number : “))
+count = 0
+print(“Number of digits :”,number_of_digits(n))
+

@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+long int octal_to_decimal(int octal)
+{
+    int decimal = 0, i = 0;
+
+    while(octal != 0)
+    {
+        decimal += (octal) * pow(8,i);  // multiply with powers of 8
+        ++i;
+        octal/=10;
+    }
+
+    i = 1;
+
+    return decimal;
+}
+
+int main()
+{
+    int octal;
+
+    cout << “\nEnter an octal number: “;
+    cin >> octal;
+
+    cout << “\nDecimal Equivalent : ” << octal_to_decimal(octal) << endl;;
+
+    return 0;
+}

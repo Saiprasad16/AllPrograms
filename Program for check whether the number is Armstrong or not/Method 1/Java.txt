@@ -1,0 +1,41 @@
+// Java program to check whether the number is Armstrong or not
+
+import java.util.*;
+public class sum_of_primes {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“Enter a number: “);
+        int number = sc.nextInt();
+        int temp, remainder, result = 0, n = 0 ;
+        temp = number;
+
+        // Finding the number of digits
+
+        while (temp != 0)
+        {
+            temp /= 10;
+            ++n;
+        }
+
+        temp = number;
+
+        // Checking if the number is armstrong
+
+        while (temp != 0)
+        {
+            remainder = temp;
+            result += Math.pow(remainder, n);
+            temp /= 10;
+        }
+
+        if(result == number)
+            System.out.print(number + ” is an Armstrong number\n”);
+        else
+            System.out.print(number + ” is not an Armstrong number\n”);
+
+    }
+
+}
+

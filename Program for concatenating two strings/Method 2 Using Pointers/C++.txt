@@ -1,0 +1,32 @@
+// C++ program to merge two strings
+
+#include
+using namespace std;
+
+int main()
+{
+    char str1[100], str2[100];
+
+    cout << “\nEnter the first string : “;
+    cin >> str1;
+
+    cout << “\nEnter the second string : “;
+    cin >> str2;
+    char *a = str1;
+    char *b = str2;
+
+    while(*a)
+    {
+        a++;
+    }
+    while(*b)
+    {
+        *a = *b;
+        b++;
+        a++;
+    }
+    *a = ‘\0’;
+    cout << “\nResultant String ” << str1 << endl;
+    return 0;
+}
+
